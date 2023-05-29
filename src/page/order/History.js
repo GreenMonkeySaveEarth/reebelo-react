@@ -46,7 +46,6 @@ function History(props) {
 
   return (
     <div>
-      <h1 className={styles.h1}>Order History</h1>
       <div className="relative overflow-x-auto shadow-md sm:rounded-lg py-2">
         <table className="w-full text-sm text-left text-gray-500 ">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 ">

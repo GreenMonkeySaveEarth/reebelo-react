@@ -14,33 +14,11 @@ function Description(props) {
       <h2 class="mb-2 text-lg">What is covered here</h2>
       <ol class="space-y-1 text-gray-500 list-disc list-inside">
         <li>
-          <a className="text-blue-400" href="/inventory" target="_blank">
-            /inventory
-          </a>
-          <ol>
-            <li>
-              be able to create/update products with price and stock quantity.
-            </li>
-          </ol>
-        </li>
-        <li>
           <a className="text-blue-400" href="/set_order" target="_blank">
             /set order
           </a>
           <ol>
             <li>be able to create order with product and quantity</li>
-          </ol>
-        </li>
-        <li>
-          <a className="text-blue-400" href="/order" target="_blank">
-            /order
-          </a>
-          <ol>
-            <li>
-              be able to update order with shipping information, e.g. tracking
-              company, tracking number
-            </li>
-            
           </ol>
         </li>
         <li>
@@ -51,6 +29,16 @@ function Description(props) {
             <li>  
               be able to update order with status, e.g. processing, cancelled,
               delivered.
+            </li>
+          </ol>
+        </li>
+        <li>
+          <a className="text-blue-400" href="/inventory" target="_blank">
+            /inventory
+          </a>
+          <ol>
+            <li>
+              be able to create/update products with price and stock quantity.
             </li>
           </ol>
         </li>

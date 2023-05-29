@@ -102,11 +102,14 @@ function TrackingTable(props) {
                 </td>
                 <td class="px-6 py-4">
                   {editableRowIndex === index ? (
-                    <input
-                      type="text"
+                    <select
                       value={trackingCompany}
                       onChange={(e) => setTrackingCompany(e.target.value)}
-                    />
+                    >
+                      <option value="USPS">USPS</option>
+                      <option value="FedEx">FedEx</option>
+                      <option value="UPS">UPS</option>
+                    </select>
                   ) : (
                     item.tracking_company
                   )}
