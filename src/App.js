@@ -1,23 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { Routes, Route } from 'react-router-dom';
+import InventoryPage from "./page/inventory/Inventory.js";
+
+import Home from "./component/Home.js";
+import { SessionContextProvider} from './hooks/SessionContext/context.js'
+import NavBar from "./component/NavBar.js";
+import SetOrderPage from "./page/order/SetOrderPage.js";
+import OrderHistoryPage from "./page/order/OrderHistoryPage.js";
+import TrackingPage from "./page/tracking/TrackingPage.js";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SessionContextProvider>
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/set_order" element={<SetOrderPage />} />
+          <Route path="/order_history" element={<OrderHistoryPage />} />
+          <Route path="/inventory" element={<InventoryPage />} />
+          <Route path="/tracking" element={<TrackingPage />} />
+        </Routes>
+      </SessionContextProvider>
     </div>
   );
 }
